@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f3ed" />
+  <title>FT Academy | Fresh Theory</title>
+  <style>
+    :root{--ink:#26332d;--muted:#6f7971;--paper:#f5f3ed;--white:#fffefa;--sage:#dfe8dc;--sage-dark:#657d69;--orange:#c8754d;--line:#e6e5dd;--shadow:0 12px 34px rgba(38,51,45,.07)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-size:18px;font-weight:900;letter-spacing:.12em}.brand span{display:block;font-size:9px;letter-spacing:.25em;color:var(--muted);font-weight:700;margin-top:1px}
+    .back{font-size:13px;font-weight:700;color:var(--sage-dark);padding:10px 14px;border:1px solid #d5ded2;border-radius:999px;background:#fffefa}
+    .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);font-weight:800}
+    .hero{padding:54px 0 34px;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+    h1{font-size:clamp(42px,7vw,72px);line-height:.98;letter-spacing:-.055em;margin:12px 0 18px;font-weight:900}.hero p{max-width:540px;color:var(--muted);font-size:16px;margin:0 0 24px}
+    .hero-art{min-height:270px;border-radius:28px;background:linear-gradient(135deg,#dfe8dc,#eef0e8 55%,#f4dfd1);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+    .hero-art:before{content:"FT";font-size:clamp(130px,25vw,240px);font-weight:950;letter-spacing:-.12em;color:rgba(101,125,105,.16);position:absolute;right:8px;bottom:-45px}
+    .rope{width:145px;height:190px;border:5px solid var(--orange);border-bottom-color:transparent;border-radius:50%;transform:rotate(-17deg);position:relative;z-index:1}.rope:before,.rope:after{content:"";position:absolute;width:13px;height:48px;background:var(--ink);border-radius:9px;bottom:-18px}.rope:before{left:-9px;transform:rotate(18deg)}.rope:after{right:-9px;transform:rotate(-18deg)}
+    .button{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;padding:13px 19px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.02em}
+    section{padding:28px 0 42px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}.section-head h2{font-size:28px;letter-spacing:-.04em;margin:5px 0 0}.section-head p{margin:0;color:var(--muted);font-size:13px}
+    .levels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.level{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px;min-height:190px;box-shadow:0 5px 18px rgba(38,51,45,.035);transition:transform .2s,border-color .2s}.level:hover{transform:translateY(-3px);border-color:#cbd8c8}.number{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--sage);color:var(--sage-dark);font-size:12px;font-weight:900}.level h3{font-size:19px;margin:17px 0 6px;letter-spacing:-.03em}.level p{font-size:12px;color:var(--muted);margin:0 0 13px}.level strong{font-size:11px;color:var(--orange);letter-spacing:.08em;text-transform:uppercase}
+    .lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.lesson{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 5px 18px rgba(38,51,45,.035)}.lesson-top{height:105px;border-radius:14px;background:linear-gradient(135deg,#e1e9de,#f2e3d8);display:flex;align-items:center;justify-content:center;margin-bottom:15px;color:var(--sage-dark);font-size:30px;font-weight:900}.lesson:nth-child(2) .lesson-top{background:linear-gradient(135deg,#f1e1d5,#e9e9dd)}.lesson:nth-child(3) .lesson-top{background:linear-gradient(135deg,#e4e9e0,#e9ded2)}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);font-weight:900}.lesson h3{font-size:17px;margin:5px 0}.lesson p{font-size:12px;color:var(--muted);margin:0 0 12px}.lesson a{font-size:12px;font-weight:800;color:var(--sage-dark)}
+    .note{background:#e8ede5;border:1px solid #dbe4d8;border-radius:20px;padding:20px 22px;display:flex;justify-content:space-between;gap:20px;align-items:center}.note h3{margin:0 0 4px;font-size:18px}.note p{margin:0;color:var(--muted);font-size:13px}.note .coming{white-space:nowrap;font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--sage-dark);text-transform:uppercase}
+    footer{padding:28px 0 40px;color:var(--muted);font-size:11px;letter-spacing:.08em;text-align:center}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:38px}.hero-art{min-height:190px}.levels{grid-template-columns:repeat(2,1fr)}.lessons{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.note{align-items:flex-start;flex-direction:column}}
+    @media(max-width:380px){.wrap{width:min(100% - 28px,1100px)}.levels{gap:9px}.level{padding:14px;min-height:180px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html">FRESH THEORY<span>MOVE DIFFERENT.</span></a>
+      <a class="back" href="index.html">← Back to home</a>
+    </header>
+    <main>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Fresh Theory learning</div>
+          <h1>Welcome to<br>FT Academy.</h1>
+          <p>Learn the fundamentals, build your rhythm and develop your skipping skills one move at a time. Find your level and get moving.</p>
+          <a class="button" href="#levels">Explore the academy&nbsp; ↓</a>
+        </div>
+        <div class="hero-art" aria-label="Fresh Theory jump rope graphic"><div class="rope"></div></div>
+      </div>
+      <section id="levels">
+        <div class="section-head"><div><div class="eyebrow">Find your starting point</div><h2>Choose your level</h2></div><p>Progress at your own pace.</p></div>
+        <div class="levels">
+          <a class="level" href="#beginner"><div class="number">01</div><h3>Beginner</h3><p>Start with the basics, build confidence and find your rhythm.</p><strong>Start here ↗</strong></a>
+          <a class="level" href="#intermediate"><div class="number">02</div><h3>Intermediate</h3><p>Develop footwork, timing and smooth combinations.</p><strong>Build skills ↗</strong></a>
+          <a class="level" href="#advanced"><div class="number">03</div><h3>Advanced</h3><p>Challenge yourself with faster and more technical moves.</p><strong>Level up ↗</strong></a>
+          <a class="level" href="#masterclass"><div class="number">04</div><h3>Masterclass</h3><p>Refine technique, speed, stamina and control.</p><strong>Go further ↗</strong></a>
+        </div>
+      </section>
+      <section id="beginner">
+        <div class="section-head"><div><div class="eyebrow">Your first steps</div><h2>Start with the essentials</h2></div><p>Build a strong foundation.</p></div>
+        <div class="lessons">
+          <article class="lesson"><div class="lesson-top">01</div><div class="tag">Beginner · Lesson 1</div><h3>Know your rope</h3><p>Understand rope length, handles and how to set yourself up.</p><a href="#lesson-note">Lesson details ↗</a></article>
+          <article class="lesson"><div class="lesson-top">02</div><div class="tag">Beginner · Lesson 2</div><h3>Hand position & posture</h3><p>Learn where your hands should sit and how to position your body.</p><a href="#lesson-note">Lesson details ↗</a></article>
+          <article class="lesson"><div class="lesson-top">03</div><div class="tag">Beginner · Lesson 3</div><h3>The basic bounce</h3><p>Practise small, controlled jumps and a steady rope rhythm.</p><a href="#lesson-note">Lesson details ↗</a></article>
+        </div>
+      </section>
+      <section id="intermediate">
+        <div class="section-head"><div><div class="eyebrow">Develop your movement</div><h2>Intermediate skills</h2></div></div>
+        <div class="lessons"><article class="lesson"><div class="lesson-top">↔</div><div class="tag">Footwork</div><h3>Boxer step</h3><p>Shift your weight smoothly from foot to foot.</p></article><article class="lesson"><div class="lesson-top">⌁</div><div class="tag">Coordination</div><h3>Alternate-foot step</h3><p>Build a light, running-style skipping rhythm.</p></article><article class="lesson"><div class="lesson-top">∞</div><div class="tag">Control</div><h3>Side swings</h3><p>Learn to control the rope beside your body.</p></article></div>
+      </section>
+      <section id="advanced">
+        <div class="section-head"><div><div class="eyebrow">Push your limits</div><h2>Advanced skills</h2></div></div>
+        <div class="lessons"><article class="lesson"><div class="lesson-top">2×</div><div class="tag">Power & timing</div><h3>Double unders</h3><p>Work towards two rope rotations per jump.</p></article><article class="lesson"><div class="lesson-top">✕</div><div class="tag">Coordination</div><h3>Criss-cross</h3><p>Practise crossing and opening the arms with control.</p></article><article class="lesson"><div class="lesson-top">＋</div><div class="tag">Combinations</div><h3>Link your moves</h3><p>Combine skills into flowing sequences.</p></article></div>
+      </section>
+      <section id="masterclass">
+        <div class="note" id="lesson-note"><div><h3>Instructor video lessons are coming.</h3><p>We're developing clear demonstrations and coaching tips for every technique. For now, this is the Academy structure and lesson roadmap.</p></div><div class="coming">Coming soon</div></div>
+      </section>
+    </main>
+    <footer>FRESH THEORY&nbsp; · &nbsp;MOVE DIFFERENT.</footer>
+  </div>
+</body>
+</html>
