@@ -84,7 +84,23 @@ body{background:var(--bg);color:var(--cream)}
 .ft-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.ft-stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 8px 24px rgba(36,48,37,.035)}.ft-stat small{display:block;color:var(--muted);font-size:9px;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.ft-stat strong{display:block;font-size:29px;letter-spacing:-.06em;margin-top:5px;color:#344a37}.ft-stat span{font-size:10px;color:var(--muted)}.ft-badges{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}.ft-badge{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 8px;text-align:center;opacity:.48;filter:grayscale(1)}.ft-badge.unlocked{opacity:1;filter:none;border-color:#cbd9c8;background:#f5f8f3}.ft-badge .medal{font-size:27px;display:block;margin-bottom:7px}.ft-badge b{display:block;font-size:10px;color:#344a37}.ft-badge small{font-size:9px;color:var(--muted)}.ft-certificate-btn{margin-top:15px;border:0;border-radius:999px;padding:12px 18px;background:#26372b;color:#fff;font-weight:850;font-size:11px;letter-spacing:.06em;text-transform:uppercase}.ft-certificate-btn:disabled{opacity:.45}.certificate-modal{display:none;position:fixed;inset:0;background:rgba(22,29,23,.72);z-index:40;align-items:center;justify-content:center;padding:18px}.certificate-modal.open{display:flex}.certificate-sheet{width:min(680px,100%);background:#fbfaf5;color:#26372b;border:9px double #9aaf98;padding:clamp(24px,6vw,54px);text-align:center;box-shadow:0 25px 80px rgba(0,0,0,.25)}.certificate-sheet .cert-brand{font-size:12px;letter-spacing:.28em;font-weight:950;color:#637c65}.certificate-sheet h2{font-size:clamp(30px,7vw,52px);line-height:1;margin:22px 0 12px;letter-spacing:-.06em}.certificate-sheet p{color:#647064}.certificate-sheet .cert-name{font-size:28px;font-weight:850;border-bottom:1px solid #aab8a7;padding:12px 4px;margin:22px auto;max-width:430px}.certificate-actions{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap}.certificate-actions button{border:0;border-radius:999px;padding:11px 17px;font-weight:800;background:#26372b;color:#fff}.certificate-actions button:last-child{background:#e8eee5;color:#26372b}
 @media(max-width:600px){.ft-stats{grid-template-columns:repeat(3,1fr);gap:8px}.ft-stat{padding:13px 10px}.ft-stat strong{font-size:24px}.ft-badges{grid-template-columns:repeat(3,1fr)}}
 @media print{body *{visibility:hidden!important}.certificate-modal,.certificate-modal *{visibility:visible!important}.certificate-modal{display:flex!important;position:absolute;inset:0;background:#fff;padding:0}.certificate-sheet{width:100%;box-shadow:none;border:9px double #9aaf98}.certificate-actions{display:none!important}}
-
+/* FRESH THEORY PREMIUM MEMBERSHIP */
+.membership-section{margin-top:38px;padding:26px;background:linear-gradient(135deg,#e6eee2,#f7f7f1);border:1px solid #d5e1d1;border-radius:24px;color:#293b2e}
+.membership-section .eyebrow{color:#637c65}
+.membership-section h2{font-size:clamp(27px,5vw,38px);letter-spacing:-.05em;margin:9px 0}
+.membership-section>p{font-size:13px;color:#637064;max-width:520px}
+.membership-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:20px}
+.membership-plan{background:#fff;border:1px solid #dce4d9;border-radius:18px;padding:20px;position:relative}
+.membership-plan.featured{border:2px solid #748d72;box-shadow:0 10px 25px rgba(45,65,45,.09)}
+.membership-plan h3{font-size:18px;margin:5px 0}
+.membership-price{font-size:30px;font-weight:950;letter-spacing:-.06em;margin:10px 0}
+.membership-price small{font-size:11px;font-weight:600;letter-spacing:0;color:#737c72}
+.membership-plan ul{padding-left:18px;color:#637064;font-size:12px;line-height:1.8}
+.membership-plan button{width:100%;border:0;border-radius:999px;padding:12px;background:#293b2e;color:white;font-size:11px;font-weight:900;cursor:pointer;margin-top:10px}
+.membership-plan.featured button{background:#c96d45}
+.membership-label{font-size:9px;font-weight:900;letter-spacing:.15em;color:#637c65}
+.premium-lock{display:inline-block;background:#f5eadf;color:#a45d3b;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:900}
+@media(max-width:760px){.membership-plans{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
