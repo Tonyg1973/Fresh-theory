@@ -236,16 +236,20 @@ body{background:var(--bg);color:var(--cream)}
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-function enterFreshTheory(){function revisitWelcome(){
+function enterFreshTheory(){
+  localStorage.setItem('ftWelcomeSeen','true');
+  document.getElementById('welcomeScreen').hidden=true;
+}
+
+function revisitWelcome(){
   localStorage.removeItem('ftWelcomeSeen');
   document.getElementById('welcomeScreen').hidden=false;
   window.scrollTo(0,0);
 }
-  localStorage.setItem('ftWelcomeSeen','true');
-  document.getElementById('welcomeScreen').hidden=true;
-}
+
 if(localStorage.getItem('ftWelcomeSeen')==='true'){
   document.getElementById('welcomeScreen').hidden=true;
+}
 }
 function goTo(id,button){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.mobile-nav button').forEach(b=>b.classList.remove('active'));if(button)button.classList.add('active');else{const map={home:0,academy:1,challenges:2,workouts:3,progress:4};const b=document.querySelectorAll('.mobile-nav button')[map[id]];if(b)b.classList.add('active')}}
 let toastTimer;function showMembershipMessage(){
