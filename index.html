@@ -250,7 +250,6 @@ function revisitWelcome(){
 if(localStorage.getItem('ftWelcomeSeen')==='true'){
   document.getElementById('welcomeScreen').hidden=true;
 }
-}
 function goTo(id,button){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.mobile-nav button').forEach(b=>b.classList.remove('active'));if(button)button.classList.add('active');else{const map={home:0,academy:1,challenges:2,workouts:3,progress:4};const b=document.querySelectorAll('.mobile-nav button')[map[id]];if(b)b.classList.add('active')}}
 let toastTimer;function showMembershipMessage(){
   notify('Premium membership checkout is coming soon. No payment is taken yet.');
