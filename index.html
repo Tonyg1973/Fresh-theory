@@ -236,7 +236,11 @@ body{background:var(--bg);color:var(--cream)}
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-function enterFreshTheory(){
+function enterFreshTheory(){function revisitWelcome(){
+  localStorage.removeItem('ftWelcomeSeen');
+  document.getElementById('welcomeScreen').hidden=false;
+  window.scrollTo(0,0);
+}
   localStorage.setItem('ftWelcomeSeen','true');
   document.getElementById('welcomeScreen').hidden=true;
 }
